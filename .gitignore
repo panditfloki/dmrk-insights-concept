@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.vercel/
+*.tsbuildinfo
+.DS_Store
+
+# Vercel CLI writes a short-lived OIDC token here. Never commit it.
+.env
+.env.*
+!.env.example
