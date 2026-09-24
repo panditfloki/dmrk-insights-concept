@@ -1,64 +1,58 @@
-# DMRK Insights — frontend concept
+# DMRK Insights
 
-A design concept for [dmrkinsights.com](https://dmrkinsights.com), built by
-**dydxfx** as a consulting deliverable. **This is not the live site.**
+Client website built by **Shwetank Pandey / dydxfx** for DMRK Insights.
 
-The owner requested removal of the visible concept banner on 2026-09-16.
-Every page retains `noindex, nofollow, noarchive, nosnippet` in HTML metadata
-and HTTP-header configuration. The license remains unchanged. This is still
-a concept, not the client's live site.
+**Live website:** https://dmrkinsights.com/
 
-## What it is
+This public repository showcases the Next.js frontend and its integration with a separately hosted Laravel/Filament CMS. Backend source, production databases, uploaded client files and credentials are not included.
 
-- **Next.js 16** (App Router), all pages statically generated
-- **11 routes** — home, about, services + 4 service detail pages, industries,
-  insights library, insight detail, contact
-- **24 content items** — the client's own articles, reports and case studies,
-  read from their live site, not invented
-- **Motion** calibrated by measurement against the two reference sites the
-  client chose: Kantar's restraint as the baseline (CSS, 180/320/500ms), GLG's
-  accents via GSAP ScrollTrigger, and a rebuild of GLG's mega-menu using their
-  own shipped configuration
+## Features
 
-## Brand
+- CMS-managed pages, navigation, categories, services and industries
+- Articles, reports and case studies with category and sector filtering
+- Reader registration, sign-in and gated article access
+- Contact enquiries routed through the backend API
+- Responsive navigation, scroll progress and reduced-motion support
+- DMRK favicon and shared, keyboard-accessible themed dropdowns
 
-The blue `#0f67c7` is a client lock, read from their live stylesheet. Full
-palette and rules in `BRAND.md`. Typography (Inter + Source Serif 4) is a
-proposal, not a lock — the client locked the colour, not the typeface.
+## Stack
 
-## Scroll progress
-
-The shared layout mounts `ScrollProgress`, a React port of dydxfx's exec spine.
-It shows page-wide scroll progress as `000%` through `100%` after 24px of scrolling.
-Labels come from each main section's `data-exec`, accessible label, heading, or ID;
-the article body explicitly uses `Reading`. Progress still updates on pages with
-no identifiable sections. Route changes rebuild the labels, and content resizing
-or filtering refreshes the measurement. A fixed-width caret holds the existing
-DMRK D mark; the blue cell and white mark blink together using stepped timing.
-Reduced motion disables the blink and leaves the D visible. There is no animated
-interpolation of scroll progress. The sticky navigation
-stays accessible below the panel. Colours use existing DMRK brand tokens only.
-
-The tagline and progress strips share a fixed 32px slot, swapping by transform
-after the existing 24px threshold. The sticky nav's offset stays 32px throughout;
-neither strip changes the document's height. Reduced motion disables the slide.
-The progress surface uses 8% DMRK paper with the reference's 7px blur and 1.25
-saturation. Contrast over dark content or imagery requires rendered review.
-
-## Known limits
-
-- The contact form does not submit anywhere and says so on screen. There is no
-  backend yet; building one is the other half of the proposed engagement.
-- Hero imagery is still hot-linked from Unsplash, inherited from the live site.
-- Newsletter, privacy policy and terms are marked "not in this concept".
+Next.js 16, React 19, TypeScript, CSS and GSAP. Production runs on the client's existing AWS server. Laravel/Filament supplies content and administration at `/admin`.
 
 ## Run locally
 
 ```bash
-npm install
-npm run dev     # http://localhost:3210
+npm ci
+npm run dev
 ```
 
----
+Open http://localhost:3210. Without backend configuration, the frontend uses bundled public demonstration content. Reader authentication and enquiry delivery require the backend.
 
-© 2026 dydxfx — https://dydxfx.com · Pandit Floki <pandit@dydxfx.com>
+For an existing local backend, create `.env.local` (never commit it):
+
+```dotenv
+DMRK_API_URL=http://127.0.0.1:8091/api/v1
+DMRK_REQUIRE_API=true
+DMRK_PUBLIC_SITE=false
+```
+
+`DMRK_PUBLIC_SITE=true` enables the public-site mode. Local and preview builds remain non-indexable by default. AWS uses standalone output; Vercel packages Next.js directly.
+
+## Checks
+
+```bash
+npm run typecheck
+node tests/enquiries.cjs
+node tests/reader-proxy.cjs
+node tests/published-content.cjs
+node tests/motion.cjs
+npm run build
+```
+
+## Ownership
+
+Design and implementation by dydxfx. DMRK Insights owns its name, logo and editorial material. Public visibility is for portfolio review and does not grant reuse rights. See [LICENSE](LICENSE).
+
+## Operational limits
+
+Password recovery requires configured email delivery on the backend. SMTP setup and inbox verification are separate from this frontend release.
