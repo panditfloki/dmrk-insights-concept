@@ -1,35 +1,40 @@
+import { getPublishedContent } from '@/lib/published-content';
+export const dynamic = "force-dynamic";
+import { getWebsitePage, getWebsite, pageMetadata } from '@/lib/website';
+import { pageCopy, settingsCopy, siteServices, siteIndustries, siteMethod, pageCount } from '@/lib/website-shared';
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/WebsiteLink";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import Card from "@/components/Card";
 import { Arrow } from "@/components/Icons";
-import { services, getService } from "@/lib/site";
-import { allItems } from "@/lib/content";
 
-export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
-}
+
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const s = getService(slug);
-  return s ? { title: s.name, description: s.intro } : {};
+  const services = siteServices(await getWebsite());
+  const s = services.find(s=>s.slug===slug);
+  const entry=(await getWebsite()).pages.find(p=>p.path===`/services/${slug}`);
+  const c=pageCopy(entry);
+  return s ? { title: c('seo_title',s.name), description: c('seo_description',s.intro) } : {};
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const {site, page, copy} = await getWebsitePage('service-labels');
   const { slug } = await params;
-  const s = getService(slug);
+  const services = siteServices(await getWebsite());
+  const s = services.find(s=>s.slug===slug);
   if (!s) notFound();
 
-  const related = allItems.slice(0, 3);
+  const related = (await getPublishedContent()).slice(0, pageCount(site,'relatedCount',3));
 
   return (
     <>
       <section className="page-head">
         <div className="wrap">
           <nav className="crumbs" aria-label="Breadcrumb">
-            <Link href="/services">Services</Link>
+            <Link href="/services">{copy("text_1", "Services") }</Link>
             <span aria-hidden="true">/</span>
             <span>{s.name}</span>
           </nav>
@@ -37,8 +42,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <h1 style={{ fontSize: "var(--step-3)", maxWidth: "24ch" }}>{s.h1}</h1>
           <p className="lede">{s.intro}</p>
           <div className="hero-actions" style={{ marginTop: 24, marginBottom: 0 }}>
-            <Link className="button" href="/contact">Scope a project <Arrow /></Link>
-            <Link className="button button--ghost" href="/insights">See related work <Arrow /></Link>
+            <Link className="button" href="/contact">{copy("text_2", "Scope a project") }{" "}<Arrow /></Link>
+            <Link className="button button--ghost" href="/insights">{copy("text_3", "See related work") }{" "}<Arrow /></Link>
           </div>
         </div>
       </section>
@@ -47,7 +52,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="wrap">
           <div className="section-head">
             <div>
-              <Reveal as="p" className="eyebrow">Capabilities</Reveal>
+              <Reveal as="p" className="eyebrow">{copy("text_4", "Capabilities") }</Reveal>
               <Reveal as="h2">{s.sectionTitle}</Reveal>
               <Reveal as="p">{s.sectionIntro}</Reveal>
             </div>
@@ -71,8 +76,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="wrap">
           <div className="section-head">
             <div>
-              <Reveal as="p" className="eyebrow">Other services</Reveal>
-              <Reveal as="h2">Often scoped together</Reveal>
+              <Reveal as="p" className="eyebrow">{copy("text_5", "Other services") }</Reveal>
+              <Reveal as="h2">{copy("text_6", "Often scoped together") }</Reveal>
             </div>
           </div>
           <div className="grid grid--3">
@@ -92,10 +97,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="wrap">
           <div className="section-head">
             <div>
-              <Reveal as="p" className="eyebrow">Insights</Reveal>
-              <Reveal as="h2">Recent work</Reveal>
+              <Reveal as="p" className="eyebrow">{copy("text_7", "Insights") }</Reveal>
+              <Reveal as="h2">{copy("text_8", "Recent work") }</Reveal>
             </div>
-            <Reveal><Link className="textlink" href="/insights">All insights <Arrow /></Link></Reveal>
+            <Reveal><Link className="textlink" href="/insights">{copy("text_9", "All insights") }{" "}<Arrow /></Link></Reveal>
           </div>
           <div className="grid grid--3">
             {related.map((r) => (

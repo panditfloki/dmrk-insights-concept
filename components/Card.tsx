@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/WebsiteLink";
 import Image from "next/image";
 import { Arrow } from "./Icons";
 import { TYPE_LABEL, formatDate, readingMinutes, type ContentItem } from "@/lib/content";

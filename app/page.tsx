@@ -1,30 +1,34 @@
-import Link from "next/link";
+import { getWebsitePage, getWebsite, pageMetadata } from '@/lib/website';
+import { pageCopy, settingsCopy, siteServices, siteIndustries, siteMethod, pageCount } from '@/lib/website-shared';
+import Link from "@/components/WebsiteLink";
 import Image from "next/image";
 import Card from "@/components/Card";
 import Reveal from "@/components/Reveal";
 import { Arrow } from "@/components/Icons";
-import { allItems, getByType, industries, featuredCase, featuredCaseStats } from "@/lib/content";
+
+
+import { getPublishedContent } from "@/lib/published-content";
 
 /* Every claim on this page comes from the client's own live site.
    No invented statistics, no placeholder counts, no stock testimonials. */
 
-const PILLARS = [
-  { t: "Growth Strategy", d: "Market entry, sizing and prioritisation built on primary evidence." },
-  { t: "Industry Reports", d: "Sector outlooks with the method and sample stated up front." },
-  { t: "Survey Programs", d: "Instrument design, fieldwork controls and clean, weighted data." },
-  { t: "Expert Panels", d: "Structured interviews with operators who have actually done it." },
-];
 
-const METHOD = [
-  { n: "01", t: "Frame the decision", d: "Start from the call leadership must make, not the questionnaire." },
-  { n: "02", t: "Collect primary evidence", d: "Surveys, expert interviews and competitor scans, with controls stated." },
-  { n: "03", t: "Test the read", d: "Triangulate sources before a number reaches a slide." },
-  { n: "04", t: "Hand over the action", d: "A recommendation with its assumptions and what would change it." },
-];
 
-export default function Home() {
-  const latest = allItems.filter((i) => i.type === "article").slice(0, 3);
-  const reports = getByType("report").slice(0, 4);
+
+
+export async function generateMetadata() { return pageMetadata('home'); }
+
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const {site, page, copy} = await getWebsitePage('home');
+  const PILLARS = [0,1,2,3].map(i=>({t:copy(`pillars_${i}_t`),d:copy(`pillars_${i}_d`)}));
+  const METHOD = [0,1,2,3].map(i=>({n:copy(`method_${i}_n`),t:copy(`method_${i}_t`),d:copy(`method_${i}_d`)}));
+  const allItems = await getPublishedContent();
+  const industries = siteIndustries(site).map(s=>s.name).slice(0,pageCount(site,'industriesCount',12));
+  const featuredCase = allItems.find((i) => i.id === settingsCopy(site)('featuredCaseId'));
+  const latest = allItems.filter((i) => i.type === "article").slice(0,pageCount(site,'articlesCount',3));
+  const reports = allItems.filter((i) => i.type === "report").slice(0,pageCount(site,'reportsCount',4));
 
   return (
     <>
@@ -32,28 +36,24 @@ export default function Home() {
       <section className="hero">
         <div className="wrap">
           <div>
-            <Reveal group="hero" as="p" className="eyebrow">Market research &amp; strategic consulting</Reveal>
-            <Reveal group="hero" as="h1">
-              Strategic consulting and research for <em>confident decisions.</em>
+            <Reveal group="hero" as="p" className="eyebrow">{copy("text_1", "Market research & strategic consulting") }</Reveal>
+            <Reveal group="hero" as="h1">{copy("text_2", "Strategic consulting and research for") }{" "}<em>{copy("text_3", "confident decisions.") }</em>
             </Reveal>
-            <Reveal group="hero" as="p" className="lede">
-              Market intelligence, customer research, competitor analysis and surveys — built so the
-              method is visible and the recommendation is something leadership can act on.
-            </Reveal>
+            <Reveal group="hero" as="p" className="lede">{copy("text_4", "Market intelligence, customer research, competitor analysis and surveys, built so the method is visible and the recommendation is something leadership can act on.") }</Reveal>
             <Reveal group="hero" className="hero-actions">
-              <Link className="button" href="/contact">Request research <Arrow /></Link>
-              <Link className="button button--ghost" href="/insights">Browse insights <Arrow /></Link>
+              <Link className="button" href="/contact">{copy("text_5", "Request research") }{" "}<Arrow /></Link>
+              <Link className="button button--ghost" href="/insights">{copy("text_6", "Browse insights") }{" "}<Arrow /></Link>
             </Reveal>
             <Reveal group="hero" className="hero-proof">
-              <span className="pill pill--quiet">{industries.length} sectors covered</span>
-              <span className="pill pill--quiet">{allItems.length} published pieces</span>
-              <span className="pill pill--quiet">India-first, global reach</span>
+              <span className="pill pill--quiet">{siteIndustries(site).length}{" "}{copy("text_7", "sectors covered") }</span>
+              <span className="pill pill--quiet">{allItems.length}{" "}{copy("text_8", "published pieces") }</span>
+              <span className="pill pill--quiet">{copy("text_9", "India-first, global reach") }</span>
             </Reveal>
           </div>
 
           <Reveal group="hero" className="hero-panel">
-            <h2>From research to impact</h2>
-            <p>How an engagement actually runs.</p>
+            <h2>{copy("text_10", "From research to impact") }</h2>
+            <p>{copy("text_11", "How an engagement actually runs.") }</p>
             <ol>
               {METHOD.map((m) => (
                 <li key={m.n}>
@@ -74,10 +74,10 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <div>
-              <Reveal as="p" className="eyebrow">What we do</Reveal>
-              <Reveal as="h2">Primary research that becomes action.</Reveal>
+              <Reveal as="p" className="eyebrow">{copy("text_12", "What we do") }</Reveal>
+              <Reveal as="h2">{copy("text_13", "Primary research that becomes action.") }</Reveal>
             </div>
-            <Reveal><Link className="textlink" href="/contact">Scope a project <Arrow /></Link></Reveal>
+            <Reveal><Link className="textlink" href="/contact">{copy("text_14", "Scope a project") }{" "}<Arrow /></Link></Reveal>
           </div>
           <div className="grid grid--4">
             {PILLARS.map((p) => (
@@ -97,13 +97,13 @@ export default function Home() {
         <section className="section band">
           <div className="wrap">
             <div>
-              <Reveal as="p" className="eyebrow" group="band">Case study · {featuredCase.industry}</Reveal>
-              <Reveal as="h2" group="band">Identifying a $5M revenue opportunity in regional logistics.</Reveal>
+              <Reveal as="p" className="eyebrow" group="band">{copy("text_15", "Case study ·") }{" "}{featuredCase.industry}</Reveal>
+              <Reveal as="h2" group="band">{featuredCase.title}</Reveal>
               <Reveal as="p" group="band" className="lede" >{featuredCase.summary}</Reveal>
               <Reveal group="band" className="band-stats">
                 {/* Verbatim from the client's live homepage, and tied to THIS case study
                     by id — not to "the newest case", which is a different study. */}
-                {featuredCaseStats.map((s) => (
+                {(featuredCase.statistics || []).map((s) => (
                   <div className="band-stat" key={s.label}>
                     <strong>{s.value}</strong>
                     <span>{s.label}</span>
@@ -111,8 +111,7 @@ export default function Home() {
                 ))}
               </Reveal>
               <Reveal group="band" style={{ marginTop: 26 }}>
-                <Link className="button button--on-dark" href={`/insights/${featuredCase.slug}`}>
-                  Read complete case study <Arrow />
+                <Link className="button button--on-dark" href={`/insights/${featuredCase.slug}`}>{copy("text_17", "Read complete case study") }{" "}<Arrow />
                 </Link>
               </Reveal>
             </div>
@@ -128,9 +127,9 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <div>
-              <Reveal as="p" className="eyebrow">Coverage</Reveal>
-              <Reveal as="h2">Coverage across every major sector</Reveal>
-              <Reveal as="p">Each sector has its own panel, its own sample frame and its own benchmarks.</Reveal>
+              <Reveal as="p" className="eyebrow">{copy("text_18", "Coverage") }</Reveal>
+              <Reveal as="h2">{copy("text_19", "Coverage across every major sector") }</Reveal>
+              <Reveal as="p">{copy("text_20", "Each sector has its own panel, its own sample frame and its own benchmarks.") }</Reveal>
             </div>
           </div>
           <div className="grid grid--3">
@@ -141,7 +140,7 @@ export default function Home() {
                   <Link className="tile" href={`/insights?industry=${encodeURIComponent(ind)}`}>
                     <span>
                       {ind}
-                      <small>{n} published {n === 1 ? "piece" : "pieces"}</small>
+                      <small>{n}{" "}{copy("text_21", "published") }{" "}{n === 1 ? "piece" : "pieces"}</small>
                     </span>
                     <Arrow />
                   </Link>
@@ -157,10 +156,10 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <div>
-              <Reveal as="p" className="eyebrow">Insights</Reveal>
-              <Reveal as="h2">Fresh articles from DMRK analysts</Reveal>
+              <Reveal as="p" className="eyebrow">{copy("text_22", "Insights") }</Reveal>
+              <Reveal as="h2">{copy("text_23", "Fresh articles from DMRK analysts") }</Reveal>
             </div>
-            <Reveal><Link className="textlink" href="/insights">All insights <Arrow /></Link></Reveal>
+            <Reveal><Link className="textlink" href="/insights">{copy("text_24", "All insights") }{" "}<Arrow /></Link></Reveal>
           </div>
           <div className="grid grid--3">
             {latest.map((item, i) => (
@@ -177,10 +176,10 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <div>
-              <Reveal as="p" className="eyebrow">Reports</Reveal>
-              <Reveal as="h2">Reports, case studies and briefings</Reveal>
+              <Reveal as="p" className="eyebrow">{copy("text_25", "Reports") }</Reveal>
+              <Reveal as="h2">{copy("text_26", "Reports, case studies and briefings") }</Reveal>
             </div>
-            <Reveal><Link className="textlink" href="/insights?type=report">All reports <Arrow /></Link></Reveal>
+            <Reveal><Link className="textlink" href="/insights?type=report">{copy("text_27", "All reports") }{" "}<Arrow /></Link></Reveal>
           </div>
           <div className="grid grid--4">
             {reports.map((item) => (
@@ -203,10 +202,10 @@ export default function Home() {
         <div className="wrap">
           <Reveal className="cta">
             <div>
-              <h2>Have a decision that needs evidence?</h2>
-              <p>Tell us the call you have to make. We will come back with the method, the sample and the timeline before any money moves.</p>
+              <h2>{copy("text_28", "Have a decision that needs evidence?") }</h2>
+              <p>{copy("text_29", "Tell us the call you have to make. We will come back with the method, the sample and the timeline before any money moves.") }</p>
             </div>
-            <Link className="button button--on-dark" href="/contact">Talk to an analyst <Arrow /></Link>
+            <Link className="button button--on-dark" href="/contact">{copy("text_30", "Talk to an analyst") }{" "}<Arrow /></Link>
           </Reveal>
         </div>
       </section>

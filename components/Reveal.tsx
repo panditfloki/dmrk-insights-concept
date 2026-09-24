@@ -1,7 +1,7 @@
 import type { CSSProperties, ElementType, ReactNode } from "react";
 
 /**
- * Marks a subtree for scroll reveal. The start state is CSS; GSAP finishes it.
+ * Marks a subtree for scroll reveal. GSAP hides only targets below the viewport.
  * `group` makes siblings stagger together (0.15s apart) instead of each firing alone.
  */
 export default function Reveal({

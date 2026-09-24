@@ -1,22 +1,21 @@
+import { getReaderContent } from '@/lib/reader';
+import ReaderSignOut from '@/components/ReaderSignOut';
+import { getWebsitePage } from '@/lib/website';
+import { getPublishedContent } from "@/lib/published-content";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/WebsiteLink";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Card from "@/components/Card";
 import Reveal from "@/components/Reveal";
 import { Arrow } from "@/components/Icons";
 import {
-  allItems,
-  getBySlug,
   formatDate,
   readingMinutes,
   TYPE_LABEL,
   TYPE_PLURAL,
 } from "@/lib/content";
 
-export function generateStaticParams() {
-  return allItems.map((i) => ({ slug: i.slug }));
-}
 
 export async function generateMetadata({
   params,
@@ -24,18 +23,31 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const item = getBySlug(slug);
+  const allItems = await getPublishedContent();
+  const item = allItems.find((i) => i.slug === slug);
   if (!item) return {};
   return {
-    title: item.title,
-    description: item.summary,
-    openGraph: { title: item.title, description: item.summary, images: [item.image] },
+    title: item.seoTitle || item.title,
+    description: item.seoDescription || item.summary,
+    alternates: item.canonicalUrl ? {canonical:item.canonicalUrl} : undefined,
+    openGraph: { title: item.seoTitle || item.title, description: item.seoDescription || item.summary, images: [item.image] },
   };
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const item = getBySlug(slug);
+  const [{copy}, allItems, readerItem] = await Promise.all([
+    getWebsitePage('insight-labels'),
+    getPublishedContent(),
+    process.env.DMRK_API_URL ? getReaderContent(slug).catch(() => null) : Promise.resolve(null),
+  ]);
+  const publishedItem = allItems.find((i) => i.slug === slug);
+  const item = readerItem ?? (publishedItem ? {
+    ...publishedItem,
+    locked: publishedItem.type === 'article',
+  } : null);
   if (!item) notFound();
 
   const related = allItems
@@ -50,7 +62,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <section className="article-hero">
           <div className="wrap">
             <nav className="crumbs" aria-label="Breadcrumb">
-              <Link href="/insights">Insights</Link>
+              <Link href="/insights">{copy("text_1", "Insights") }</Link>
               <span aria-hidden="true">/</span>
               <Link href={`/insights?type=${item.type}`}>{TYPE_PLURAL[item.type]}</Link>
             </nav>
@@ -64,7 +76,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <i className="dot" />
               <time dateTime={item.publishDate}>{formatDate(item.publishDate)}</time>
               <i className="dot" />
-              <span>{readingMinutes(item)} min read</span>
+              <span>{readingMinutes(item)}{" "}{copy("text_2", "min read") }</span>
             </Reveal>
           </div>
         </section>
@@ -82,39 +94,40 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <p key={i}>{p}</p>
               ))}
 
+              {item.locked ? <section className="reader-gate" aria-label="Continue reading"><h2>Continue reading with a free account</h2><p>Register or sign in to read the full article.</p><div className="hero-actions"><Link className="button" href={`/reader/register?next=${encodeURIComponent('/insights/'+slug)}`}>Create free account</Link><Link className="textlink" href={`/reader/login?next=${encodeURIComponent('/insights/'+slug)}`}>Already registered? Sign in</Link></div></section> : item.type==='article' ? <p className="reader-status">Full article unlocked. <ReaderSignOut/></p> : null}
+
               <div className="cta" style={{ marginTop: 32 }}>
                 <div>
-                  <h2 style={{ fontSize: "var(--step-2)" }}>Need this for your market?</h2>
-                  <p>DMRK Insights can tailor this topic to your market, customer or growth question.</p>
+                  <h2 style={{ fontSize: "var(--step-2)" }}>{copy("text_3", "Need this for your market?") }</h2>
+                  <p>{copy("text_4", "DMRK Insights can tailor this topic to your market, customer or growth question.") }</p>
                 </div>
-                <Link className="button button--on-dark" href="/contact">Request research <Arrow /></Link>
+                <Link className="button button--on-dark" href="/contact">{copy("text_5", "Request research") }{" "}<Arrow /></Link>
               </div>
             </div>
 
             <aside>
               <div className="aside-card">
-                <h3>Details</h3>
+                <h3>{copy("text_6", "Details") }</h3>
                 <dl>
                   <div>
-                    <dt>Format</dt>
+                    <dt>{copy("text_7", "Format") }</dt>
                     <dd>{TYPE_LABEL[item.type]}</dd>
                   </div>
                   <div>
-                    <dt>Sector</dt>
+                    <dt>{copy("text_8", "Sector") }</dt>
                     <dd>{item.industry}</dd>
                   </div>
                   <div>
-                    <dt>Practice</dt>
+                    <dt>{copy("text_9", "Practice") }</dt>
                     <dd>{item.category}</dd>
                   </div>
                   <div>
-                    <dt>Published</dt>
+                    <dt>{copy("text_10", "Published") }</dt>
                     <dd>{formatDate(item.publishDate)}</dd>
                   </div>
                 </dl>
                 <div className="divider" />
-                <Link className="textlink" href={`/insights?industry=${encodeURIComponent(item.industry)}`}>
-                  More in {item.industry} <Arrow />
+                <Link className="textlink" href={`/insights?industry=${encodeURIComponent(item.industry)}`}>{copy("text_11", "More in") }{" "}{item.industry} <Arrow />
                 </Link>
               </div>
             </aside>
@@ -127,10 +140,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="wrap">
             <div className="section-head">
               <div>
-                <Reveal as="p" className="eyebrow">Related</Reveal>
-                <Reveal as="h2" >Continue reading</Reveal>
+                <Reveal as="p" className="eyebrow">{copy("text_12", "Related") }</Reveal>
+                <Reveal as="h2" >{copy("text_13", "Continue reading") }</Reveal>
               </div>
-              <Reveal><Link className="textlink" href="/insights">All insights <Arrow /></Link></Reveal>
+              <Reveal><Link className="textlink" href="/insights">{copy("text_14", "All insights") }{" "}<Arrow /></Link></Reveal>
             </div>
             <div className="grid grid--3">
               {related.map((r) => (

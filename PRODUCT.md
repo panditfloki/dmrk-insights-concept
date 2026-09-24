@@ -8,6 +8,10 @@ brand
 
 Research and consulting readers evaluating DMRK's expertise and editorial content. This site presents a design concept, not the live DMRK service.
 
+## Copy rule
+
+Never use em dashes (Unicode U+2014), including encoded equivalents, in public website copy or metadata. Use natural sentence breaks, commas, colons or parentheses instead. This applies to navigation, forms, footers and editorial content.
+
 ## Principles
 
 - Credible editorial presentation using the client's own content, without invented claims.

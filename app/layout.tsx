@@ -1,3 +1,7 @@
+import StockTicker from '@/components/StockTicker';
+import { WebsiteProvider } from '@/components/WebsiteProvider';
+import { settingsCopy } from '@/lib/website-shared';
+import { getWebsite } from '@/lib/website';
 import type { Metadata } from "next";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import Nav from "@/components/Nav";
@@ -13,36 +17,37 @@ import "./globals.css";
 const sans = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
 const serif = Source_Serif_4({ subsets: ["latin"], display: "swap", variable: "--font-serif", weight: ["400", "600", "700"] });
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+ const copy=settingsCopy(await getWebsite());
+ return {
   title: {
     default: "Market Research & Strategic Consulting | DMRK Insights",
-    template: "%s | DMRK Insights",
+    template: `%s | ${copy('brand')} ${copy('brandSubtitle')}`,
   },
   description:
     "DMRK Insights provides market intelligence, customer research, competitor analysis, surveys, and strategic consulting for confident growth decisions.",
-  openGraph: { siteName: "DMRK Insights", locale: "en_IN", type: "website" },
+  openGraph: { siteName: `${copy('brand')} ${copy('brandSubtitle')}`, locale: "en_IN", type: "website" },
   // Concept build: must never be indexed.
-  robots: { index: false, follow: false, noarchive: true, nosnippet: true },
+  metadataBase: new URL("https://dmrkinsights.com"),
+  robots: process.env.DMRK_PUBLIC_SITE === "true"
+    ? { index: true, follow: true }
+    : { index: false, follow: false, noarchive: true, nosnippet: true },
 };
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const site = await getWebsite();
   return (
     <html lang="en-IN" className={`${sans.variable} ${serif.variable}`}>
-      <head>
-        {/* Sets .js before first paint so the reveal start state applies only when
-            JS is actually running. Without this the page must still be readable. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
-          }}
-        />
-      </head>
       <body>
+        <WebsiteProvider site={site}>
         <ScrollProgress />
         <Nav />
+        <StockTicker />
         <main>{children}</main>
         <Footer />
         <Motion />
+        </WebsiteProvider>
       </body>
     </html>
   );

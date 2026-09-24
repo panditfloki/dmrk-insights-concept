@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+let runCount = 0;
 
 /**
  * The motion layer. Deliberately small.
@@ -16,67 +19,118 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
  * than it gives on a research site people skim. Decision recorded in the state file.
  */
 export default function Motion() {
+  const pathname = usePathname();
   useEffect(() => {
-    // Honour the OS setting before anything animates.
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const run = ++runCount;
+    console.log("[motion] setup", run, pathname);
+    const revealEls = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    let ctx: ReturnType<typeof gsap.context> | undefined;
+    let frame = 0;
+    const pending = new Map<HTMLElement, gsap.core.Tween>();
 
-    const revealEls = gsap.utils.toArray<HTMLElement>("[data-reveal]");
+    const stopWatching = () => {
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      window.cancelAnimationFrame(frame);
+      frame = 0;
+    };
 
-    if (reduced) {
-      // Never leave a reveal target stuck invisible.
-      gsap.set(revealEls, { opacity: 1, y: 0, clearProps: "all" });
-      document.querySelector<HTMLElement>("[data-navbar]")?.setAttribute("data-stuck", "true");
-      return;
-    }
-
-    gsap.registerPlugin(ScrollTrigger);
-    const ctx = gsap.context(() => {
-      // ---- 1. Scroll reveal. Groups sharing a [data-reveal-group] stagger together.
-      const groups = new Map<string, HTMLElement[]>();
-      revealEls.forEach((el) => {
-        const key = el.dataset.revealGroup ?? `solo:${groups.size}`;
-        const list = groups.get(key) ?? [];
-        list.push(el);
-        groups.set(key, list);
-      });
-
-      groups.forEach((els) => {
-        gsap.fromTo(
-          els,
-          { opacity: 0, y: 18 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            ease: "power3.out",
-            stagger: 0.15, // GLG's measured value
-            scrollTrigger: {
-              trigger: els[0],
-              start: "top 88%",
-              once: true,
-            },
-          }
-        );
-      });
-
-      // ---- 2. Sticky nav surface change (GLG's gsap.to(nav, …), done as a data attr
-      //         so the actual paint stays in CSS and stays themeable).
-      const navbar = document.querySelector<HTMLElement>("[data-navbar]");
-      if (navbar) {
-        ScrollTrigger.create({
-          start: "top -12",
-          end: 99999,
-          onUpdate: (self) =>
-            navbar.setAttribute("data-stuck", String(self.scroll() > 12)),
-          onRefresh: (self) =>
-            navbar.setAttribute("data-stuck", String(self.scroll() > 12)),
+    const showAll = (error: unknown) => {
+      console.error("[motion] reveal setup failed", error);
+      stopWatching();
+      try {
+        ctx?.revert();
+      } finally {
+        revealEls.forEach((element) => {
+          element.style.opacity = "1";
+          element.style.transform = "none";
         });
       }
+    };
 
-    });
+    function revealPending() {
+      frame = 0;
+      try {
+        pending.forEach((tween, element) => {
+          if (element.getBoundingClientRect().top > window.innerHeight * 0.88) return;
+          tween.play();
+          pending.delete(element);
+        });
+        if (!pending.size) stopWatching();
+      } catch (error) {
+        showAll(error);
+      }
+    }
 
-    return () => ctx.revert();
-  }, []);
+    function schedule() {
+      if (!frame) frame = window.requestAnimationFrame(revealPending);
+    }
+
+    try {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelector<HTMLElement>("[data-navbar]")?.setAttribute("data-stuck", "true");
+        return;
+      }
+
+      gsap.registerPlugin(ScrollTrigger);
+      ctx = gsap.context(() => {});
+      ctx.add(() => {
+        const groups = new Map<string, HTMLElement[]>();
+        revealEls.forEach((element) => {
+          if (element.getBoundingClientRect().top < window.innerHeight) return;
+          const key = element.dataset.revealGroup ?? `solo:${groups.size}`;
+          const list = groups.get(key) ?? [];
+          list.push(element);
+          groups.set(key, list);
+        });
+        console.log("[motion] classify", {
+          belowViewport: Array.from(groups.values()).reduce((total, elements) => total + elements.length, 0),
+          viewportHeight: window.innerHeight,
+          bodyHeight: document.body.scrollHeight,
+        });
+
+        groups.forEach((elements) => {
+          gsap.set(elements, { opacity: 0, y: 18 });
+          const tween = gsap.to(
+            elements,
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.7,
+              ease: "power3.out",
+              stagger: 0.15,
+              paused: true,
+            }
+          );
+          pending.set(elements[0], tween);
+        });
+
+        window.addEventListener("scroll", schedule, { passive: true });
+        window.addEventListener("resize", schedule);
+        schedule();
+
+        const navbar = document.querySelector<HTMLElement>("[data-navbar]");
+        if (navbar) {
+          ScrollTrigger.create({
+            start: "top -12",
+            end: 99999,
+            onUpdate: (self) =>
+              navbar.setAttribute("data-stuck", String(self.scroll() > 12)),
+            onRefresh: (self) =>
+              navbar.setAttribute("data-stuck", String(self.scroll() > 12)),
+          });
+        }
+      });
+    } catch (error) {
+      showAll(error);
+    }
+
+    return () => {
+      console.log("[motion] cleanup", run, pathname);
+      stopWatching();
+      ctx?.revert();
+    };
+  }, [pathname]);
 
   return null;
 }

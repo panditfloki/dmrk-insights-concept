@@ -1,0 +1,2201 @@
+{
+  "home": {
+    "title": "Home",
+    "path": "/",
+    "template": "fixed",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "Market research & strategic consulting",
+        "type": "text",
+        "default": "Market research & strategic consulting"
+      },
+      {
+        "key": "text_2",
+        "label": "Strategic consulting and research for",
+        "type": "text",
+        "default": "Strategic consulting and research for"
+      },
+      {
+        "key": "text_3",
+        "label": "confident decisions.",
+        "type": "text",
+        "default": "confident decisions."
+      },
+      {
+        "key": "text_4",
+        "label": "Market intelligence, customer research, competitor analysis and surveys, built so the",
+        "type": "text",
+        "default": "Market intelligence, customer research, competitor analysis and surveys, built so the method is visible and the recommendation is something leadership can act on."
+      },
+      {
+        "key": "text_5",
+        "label": "Request research",
+        "type": "text",
+        "default": "Request research "
+      },
+      {
+        "key": "text_6",
+        "label": "Browse insights",
+        "type": "text",
+        "default": "Browse insights "
+      },
+      {
+        "key": "text_7",
+        "label": "sectors covered",
+        "type": "text",
+        "default": "sectors covered"
+      },
+      {
+        "key": "text_8",
+        "label": "published pieces",
+        "type": "text",
+        "default": "published pieces"
+      },
+      {
+        "key": "text_9",
+        "label": "India-first, global reach",
+        "type": "text",
+        "default": "India-first, global reach"
+      },
+      {
+        "key": "text_10",
+        "label": "From research to impact",
+        "type": "text",
+        "default": "From research to impact"
+      },
+      {
+        "key": "text_11",
+        "label": "How an engagement actually runs.",
+        "type": "text",
+        "default": "How an engagement actually runs."
+      },
+      {
+        "key": "text_12",
+        "label": "What we do",
+        "type": "text",
+        "default": "What we do"
+      },
+      {
+        "key": "text_13",
+        "label": "Primary research that becomes action.",
+        "type": "text",
+        "default": "Primary research that becomes action."
+      },
+      {
+        "key": "text_14",
+        "label": "Scope a project",
+        "type": "text",
+        "default": "Scope a project "
+      },
+      {
+        "key": "text_15",
+        "label": "Case study ·",
+        "type": "text",
+        "default": "Case study · "
+      },
+      {
+        "key": "text_17",
+        "label": "Read complete case study",
+        "type": "text",
+        "default": "Read complete case study"
+      },
+      {
+        "key": "text_18",
+        "label": "Coverage",
+        "type": "text",
+        "default": "Coverage"
+      },
+      {
+        "key": "text_19",
+        "label": "Coverage across every major sector",
+        "type": "text",
+        "default": "Coverage across every major sector"
+      },
+      {
+        "key": "text_20",
+        "label": "Each sector has its own panel, its own sample frame and its own benchmarks.",
+        "type": "text",
+        "default": "Each sector has its own panel, its own sample frame and its own benchmarks."
+      },
+      {
+        "key": "text_21",
+        "label": "published",
+        "type": "text",
+        "default": "published "
+      },
+      {
+        "key": "text_22",
+        "label": "Insights",
+        "type": "text",
+        "default": "Insights"
+      },
+      {
+        "key": "text_23",
+        "label": "Fresh articles from DMRK analysts",
+        "type": "text",
+        "default": "Fresh articles from DMRK analysts"
+      },
+      {
+        "key": "text_24",
+        "label": "All insights",
+        "type": "text",
+        "default": "All insights "
+      },
+      {
+        "key": "text_25",
+        "label": "Reports",
+        "type": "text",
+        "default": "Reports"
+      },
+      {
+        "key": "text_26",
+        "label": "Reports, case studies and briefings",
+        "type": "text",
+        "default": "Reports, case studies and briefings"
+      },
+      {
+        "key": "text_27",
+        "label": "All reports",
+        "type": "text",
+        "default": "All reports "
+      },
+      {
+        "key": "text_28",
+        "label": "Have a decision that needs evidence?",
+        "type": "text",
+        "default": "Have a decision that needs evidence?"
+      },
+      {
+        "key": "text_29",
+        "label": "Tell us the call you have to make. We will come back with the method, the sample and ",
+        "type": "text",
+        "default": "Tell us the call you have to make. We will come back with the method, the sample and the timeline before any money moves."
+      },
+      {
+        "key": "text_30",
+        "label": "Talk to an analyst",
+        "type": "text",
+        "default": "Talk to an analyst "
+      },
+      {
+        "key": "pillars_0_t",
+        "label": "pillars 0 t",
+        "type": "text",
+        "default": "Growth Strategy"
+      },
+      {
+        "key": "pillars_0_d",
+        "label": "pillars 0 d",
+        "type": "text",
+        "default": "Market entry, sizing and prioritisation built on primary evidence."
+      },
+      {
+        "key": "pillars_1_t",
+        "label": "pillars 1 t",
+        "type": "text",
+        "default": "Industry Reports"
+      },
+      {
+        "key": "pillars_1_d",
+        "label": "pillars 1 d",
+        "type": "text",
+        "default": "Sector outlooks with the method and sample stated up front."
+      },
+      {
+        "key": "pillars_2_t",
+        "label": "pillars 2 t",
+        "type": "text",
+        "default": "Survey Programs"
+      },
+      {
+        "key": "pillars_2_d",
+        "label": "pillars 2 d",
+        "type": "text",
+        "default": "Instrument design, fieldwork controls and clean, weighted data."
+      },
+      {
+        "key": "pillars_3_t",
+        "label": "pillars 3 t",
+        "type": "text",
+        "default": "Expert Panels"
+      },
+      {
+        "key": "pillars_3_d",
+        "label": "pillars 3 d",
+        "type": "text",
+        "default": "Structured interviews with operators who have actually done it."
+      },
+      {
+        "key": "method_0_n",
+        "label": "method 0 n",
+        "type": "text",
+        "default": "01"
+      },
+      {
+        "key": "method_0_t",
+        "label": "method 0 t",
+        "type": "text",
+        "default": "Frame the decision"
+      },
+      {
+        "key": "method_0_d",
+        "label": "method 0 d",
+        "type": "text",
+        "default": "Start from the call leadership must make, not the questionnaire."
+      },
+      {
+        "key": "method_1_n",
+        "label": "method 1 n",
+        "type": "text",
+        "default": "02"
+      },
+      {
+        "key": "method_1_t",
+        "label": "method 1 t",
+        "type": "text",
+        "default": "Collect primary evidence"
+      },
+      {
+        "key": "method_1_d",
+        "label": "method 1 d",
+        "type": "text",
+        "default": "Surveys, expert interviews and competitor scans, with controls stated."
+      },
+      {
+        "key": "method_2_n",
+        "label": "method 2 n",
+        "type": "text",
+        "default": "03"
+      },
+      {
+        "key": "method_2_t",
+        "label": "method 2 t",
+        "type": "text",
+        "default": "Test the read"
+      },
+      {
+        "key": "method_2_d",
+        "label": "method 2 d",
+        "type": "text",
+        "default": "Triangulate sources before a number reaches a slide."
+      },
+      {
+        "key": "method_3_n",
+        "label": "method 3 n",
+        "type": "text",
+        "default": "04"
+      },
+      {
+        "key": "method_3_t",
+        "label": "method 3 t",
+        "type": "text",
+        "default": "Hand over the action"
+      },
+      {
+        "key": "method_3_d",
+        "label": "method 3 d",
+        "type": "text",
+        "default": "A recommendation with its assumptions and what would change it."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Market Research & Strategic Consulting"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "path": "/about",
+    "template": "fixed",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "About DMRK Insights",
+        "type": "text",
+        "default": "About DMRK Insights"
+      },
+      {
+        "key": "text_2",
+        "label": "Research designed around the decision.",
+        "type": "text",
+        "default": "Research designed around the decision."
+      },
+      {
+        "key": "text_3",
+        "label": "DMRK Insights is a market research and strategic consulting practice that helps organ",
+        "type": "text",
+        "default": "DMRK Insights is a market research and strategic consulting practice that helps organizations evaluate markets, understand customers, and act on evidence. Support spans"
+      },
+      {
+        "key": "text_4",
+        "label": "Our approach",
+        "type": "text",
+        "default": "Our approach"
+      },
+      {
+        "key": "text_5",
+        "label": "Evidence first, recommendation second",
+        "type": "text",
+        "default": "Evidence first, recommendation second"
+      },
+      {
+        "key": "text_6",
+        "label": "Every engagement begins by defining the decision, the uncertainty surrounding it, and",
+        "type": "text",
+        "default": "Every engagement begins by defining the decision, the uncertainty surrounding it, and the evidence needed to move forward."
+      },
+      {
+        "key": "text_7",
+        "label": "sectors",
+        "type": "text",
+        "default": "sectors"
+      },
+      {
+        "key": "text_8",
+        "label": "Each with its own panel, sample frame and benchmarks.",
+        "type": "text",
+        "default": "Each with its own panel, sample frame and benchmarks."
+      },
+      {
+        "key": "text_9",
+        "label": "published pieces",
+        "type": "text",
+        "default": "published pieces"
+      },
+      {
+        "key": "text_10",
+        "label": "Reports, case studies and articles, all method-stated.",
+        "type": "text",
+        "default": "Reports, case studies and articles, all method-stated."
+      },
+      {
+        "key": "text_11",
+        "label": "Five regions",
+        "type": "text",
+        "default": "Five regions"
+      },
+      {
+        "key": "text_12",
+        "label": "Tell us the decision you need to make.",
+        "type": "text",
+        "default": "Tell us the decision you need to make."
+      },
+      {
+        "key": "text_13",
+        "label": "We will come back with the method, the sample and the timeline before any money moves",
+        "type": "text",
+        "default": "We will come back with the method, the sample and the timeline before any money moves."
+      },
+      {
+        "key": "text_14",
+        "label": "Talk to an analyst",
+        "type": "text",
+        "default": "Talk to an analyst "
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "About"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "path": "/services",
+    "template": "fixed",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "Services",
+        "type": "text",
+        "default": "Services"
+      },
+      {
+        "key": "text_2",
+        "label": "Research-backed advisory for market, customer, and growth decisions.",
+        "type": "text",
+        "default": "Research-backed advisory for market, customer, and growth decisions."
+      },
+      {
+        "key": "text_3",
+        "label": "We help teams move from open questions to tested priorities through consulting, intel",
+        "type": "text",
+        "default": "We help teams move from open questions to tested priorities through consulting, intelligence, primary research and expert access."
+      },
+      {
+        "key": "text_4",
+        "label": "Explore",
+        "type": "text",
+        "default": "Explore "
+      },
+      {
+        "key": "text_5",
+        "label": "How we work",
+        "type": "text",
+        "default": "How we work"
+      },
+      {
+        "key": "text_6",
+        "label": "Structured enough for rigor, flexible enough for real business questions.",
+        "type": "text",
+        "default": "Structured enough for rigor, flexible enough for real business questions."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Services"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industries": {
+    "title": "Industries",
+    "path": "/industries",
+    "template": "fixed",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "Industries",
+        "type": "text",
+        "default": "Industries"
+      },
+      {
+        "key": "text_2",
+        "label": "Sector intelligence for teams navigating change.",
+        "type": "text",
+        "default": "Sector intelligence for teams navigating change."
+      },
+      {
+        "key": "text_3",
+        "label": "Explore research themes across established and emerging industries, from AI-enabled h",
+        "type": "text",
+        "default": "Explore research themes across established and emerging industries, from AI-enabled healthcare to electrified mobility."
+      },
+      {
+        "key": "text_4",
+        "label": "Coverage available on request.",
+        "type": "text",
+        "default": "Coverage available on request."
+      },
+      {
+        "key": "text_5",
+        "label": "published",
+        "type": "text",
+        "default": "published "
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Industries"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "path": "/contact",
+    "template": "fixed",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "Let's connect",
+        "type": "text",
+        "default": "Let's connect"
+      },
+      {
+        "key": "text_2",
+        "label": "Tell us the decision you need to make.",
+        "type": "text",
+        "default": "Tell us the decision you need to make."
+      },
+      {
+        "key": "text_3",
+        "label": "Share your research or consulting requirement and a DMRK Insights specialist will hel",
+        "type": "text",
+        "default": "Share your research or consulting requirement and a DMRK Insights specialist will help shape the right approach."
+      },
+      {
+        "key": "text_4",
+        "label": "DMRK Insights",
+        "type": "text",
+        "default": "DMRK Insights"
+      },
+      {
+        "key": "text_5",
+        "label": "Coverage",
+        "type": "text",
+        "default": "Coverage"
+      },
+      {
+        "key": "text_6",
+        "label": "Sectors",
+        "type": "text",
+        "default": "Sectors"
+      },
+      {
+        "key": "text_7",
+        "label": "Published pieces",
+        "type": "text",
+        "default": "Published pieces"
+      },
+      {
+        "key": "text_8",
+        "label": "Market research and strategic consulting support across",
+        "type": "text",
+        "default": "Market research and strategic consulting support across"
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Contact"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "insights": {
+    "title": "Insights",
+    "path": "/insights",
+    "template": "fixed",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "Insights",
+        "type": "text",
+        "default": "Insights"
+      },
+      {
+        "key": "text_2",
+        "label": "Research notes for decision makers",
+        "type": "text",
+        "default": "Research notes for decision makers"
+      },
+      {
+        "key": "text_3",
+        "label": "Reports, case studies and articles. Filter by format or sector. Every piece states th",
+        "type": "text",
+        "default": "Reports, case studies and articles. Filter by format or sector. Every piece states the method and the market it covers."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Insights"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "service-labels": {
+    "title": "Service labels",
+    "path": null,
+    "template": "global",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "Services",
+        "type": "text",
+        "default": "Services"
+      },
+      {
+        "key": "text_2",
+        "label": "Scope a project",
+        "type": "text",
+        "default": "Scope a project "
+      },
+      {
+        "key": "text_3",
+        "label": "See related work",
+        "type": "text",
+        "default": "See related work "
+      },
+      {
+        "key": "text_4",
+        "label": "Capabilities",
+        "type": "text",
+        "default": "Capabilities"
+      },
+      {
+        "key": "text_5",
+        "label": "Other services",
+        "type": "text",
+        "default": "Other services"
+      },
+      {
+        "key": "text_6",
+        "label": "Often scoped together",
+        "type": "text",
+        "default": "Often scoped together"
+      },
+      {
+        "key": "text_7",
+        "label": "Insights",
+        "type": "text",
+        "default": "Insights"
+      },
+      {
+        "key": "text_8",
+        "label": "Recent work",
+        "type": "text",
+        "default": "Recent work"
+      },
+      {
+        "key": "text_9",
+        "label": "All insights",
+        "type": "text",
+        "default": "All insights "
+      }
+    ]
+  },
+  "insight-labels": {
+    "title": "Insight labels",
+    "path": null,
+    "template": "global",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "Insights",
+        "type": "text",
+        "default": "Insights"
+      },
+      {
+        "key": "text_2",
+        "label": "min read",
+        "type": "text",
+        "default": "min read"
+      },
+      {
+        "key": "text_3",
+        "label": "Need this for your market?",
+        "type": "text",
+        "default": "Need this for your market?"
+      },
+      {
+        "key": "text_4",
+        "label": "DMRK Insights can tailor this topic to your market, customer or growth question.",
+        "type": "text",
+        "default": "DMRK Insights can tailor this topic to your market, customer or growth question."
+      },
+      {
+        "key": "text_5",
+        "label": "Request research",
+        "type": "text",
+        "default": "Request research "
+      },
+      {
+        "key": "text_6",
+        "label": "Details",
+        "type": "text",
+        "default": "Details"
+      },
+      {
+        "key": "text_7",
+        "label": "Format",
+        "type": "text",
+        "default": "Format"
+      },
+      {
+        "key": "text_8",
+        "label": "Sector",
+        "type": "text",
+        "default": "Sector"
+      },
+      {
+        "key": "text_9",
+        "label": "Practice",
+        "type": "text",
+        "default": "Practice"
+      },
+      {
+        "key": "text_10",
+        "label": "Published",
+        "type": "text",
+        "default": "Published"
+      },
+      {
+        "key": "text_11",
+        "label": "More in",
+        "type": "text",
+        "default": "More in"
+      },
+      {
+        "key": "text_12",
+        "label": "Related",
+        "type": "text",
+        "default": "Related"
+      },
+      {
+        "key": "text_13",
+        "label": "Continue reading",
+        "type": "text",
+        "default": "Continue reading"
+      },
+      {
+        "key": "text_14",
+        "label": "All insights",
+        "type": "text",
+        "default": "All insights "
+      }
+    ]
+  },
+  "contact-form": {
+    "title": "Contact form",
+    "path": null,
+    "template": "global",
+    "fields": [
+      {
+        "key": "text_3",
+        "label": "Full name",
+        "type": "text",
+        "default": "Full name"
+      },
+      {
+        "key": "text_4",
+        "label": "placeholder: Your name",
+        "type": "text",
+        "default": "Your name"
+      },
+      {
+        "key": "text_5",
+        "label": "Work email",
+        "type": "text",
+        "default": "Work email"
+      },
+      {
+        "key": "text_6",
+        "label": "placeholder: you@company.com",
+        "type": "text",
+        "default": "you@company.com"
+      },
+      {
+        "key": "text_7",
+        "label": "Company",
+        "type": "text",
+        "default": "Company"
+      },
+      {
+        "key": "text_8",
+        "label": "placeholder: Company name",
+        "type": "text",
+        "default": "Company name"
+      },
+      {
+        "key": "text_9",
+        "label": "Sector",
+        "type": "text",
+        "default": "Sector"
+      },
+      {
+        "key": "text_10",
+        "label": "Select a sector",
+        "type": "text",
+        "default": "Select a sector"
+      },
+      {
+        "key": "text_11",
+        "label": "What do you need?",
+        "type": "text",
+        "default": "What do you need?"
+      },
+      {
+        "key": "text_12",
+        "label": "Select a service",
+        "type": "text",
+        "default": "Select a service"
+      },
+      {
+        "key": "text_13",
+        "label": "Something else",
+        "type": "text",
+        "default": "Something else"
+      },
+      {
+        "key": "text_14",
+        "label": "The decision you need to make",
+        "type": "text",
+        "default": "The decision you need to make"
+      },
+      {
+        "key": "text_15",
+        "label": "placeholder: e.g. Should we enter the Pune market next year, and through which",
+        "type": "text",
+        "default": "e.g. Should we enter the Pune market next year, and through which channel?"
+      },
+      {
+        "key": "text_16",
+        "label": "Send enquiry",
+        "type": "text",
+        "default": "Send enquiry "
+      }
+    ]
+  },
+  "library-labels": {
+    "title": "Library labels",
+    "path": null,
+    "template": "global",
+    "fields": [
+      {
+        "key": "text_1",
+        "label": "All formats",
+        "type": "text",
+        "default": "All formats"
+      },
+      {
+        "key": "text_2",
+        "label": "All sectors",
+        "type": "text",
+        "default": "All sectors"
+      },
+      {
+        "key": "text_3",
+        "label": "Showing",
+        "type": "text",
+        "default": "Showing"
+      },
+      {
+        "key": "text_4",
+        "label": "of",
+        "type": "text",
+        "default": "of "
+      },
+      {
+        "key": "text_5",
+        "label": "published pieces",
+        "type": "text",
+        "default": "published pieces"
+      },
+      {
+        "key": "text_6",
+        "label": "Clear filters",
+        "type": "text",
+        "default": "Clear filters"
+      },
+      {
+        "key": "text_7",
+        "label": "Nothing published here yet",
+        "type": "text",
+        "default": "Nothing published here yet"
+      },
+      {
+        "key": "text_8",
+        "label": "No piece matches that combination. Clear a filter, or tell us what you need researche",
+        "type": "text",
+        "default": "No piece matches that combination. Clear a filter, or tell us what you need researched."
+      }
+    ]
+  },
+  "service-market-intelligence-research": {
+    "title": "Market Intelligence",
+    "path": "/services/market-intelligence-research",
+    "template": "service",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Market Intelligence"
+      },
+      {
+        "key": "menuBlurb",
+        "label": "menuBlurb",
+        "type": "text",
+        "default": "Markets, competitors and commercial signals, tracked on a cadence."
+      },
+      {
+        "key": "h1",
+        "label": "h1",
+        "type": "text",
+        "default": "Track markets, competitors, and commercial signals that shape decisions."
+      },
+      {
+        "key": "intro",
+        "label": "intro",
+        "type": "text",
+        "default": "DMRK Insights develops focused market intelligence, competitor analysis, opportunity assessments, reports, trackers, and dashboards."
+      },
+      {
+        "key": "sectionTitle",
+        "label": "sectionTitle",
+        "type": "text",
+        "default": "Intelligence designed for a recurring decision"
+      },
+      {
+        "key": "sectionIntro",
+        "label": "sectionIntro",
+        "type": "text",
+        "default": "The scope, refresh cycle, and evidence depth are matched to how the intelligence will be used."
+      },
+      {
+        "key": "capabilities_0_title",
+        "label": "capabilities 0 title",
+        "type": "text",
+        "default": "Market sizing and forecasting"
+      },
+      {
+        "key": "capabilities_0_body",
+        "label": "capabilities 0 body",
+        "type": "text",
+        "default": "Build transparent top-down and bottom-up estimates, segment views, assumptions, scenarios, and sensitivity ranges."
+      },
+      {
+        "key": "capabilities_1_title",
+        "label": "capabilities 1 title",
+        "type": "text",
+        "default": "Competitor intelligence"
+      },
+      {
+        "key": "capabilities_1_body",
+        "label": "capabilities 1 body",
+        "type": "text",
+        "default": "Map products, pricing, positioning, partnerships, channels, customer targets, capabilities, and strategic moves."
+      },
+      {
+        "key": "capabilities_2_title",
+        "label": "capabilities 2 title",
+        "type": "text",
+        "default": "Trackers and dashboards"
+      },
+      {
+        "key": "capabilities_2_body",
+        "label": "capabilities 2 body",
+        "type": "text",
+        "default": "Define the signals, sources, cadence, alert thresholds, and implications needed for repeat monitoring."
+      },
+      {
+        "key": "capabilities_3_title",
+        "label": "capabilities 3 title",
+        "type": "text",
+        "default": "Opportunity assessment"
+      },
+      {
+        "key": "capabilities_3_body",
+        "label": "capabilities 3 body",
+        "type": "text",
+        "default": "Compare segments, geographies, use cases, and growth options using consistent evidence and scoring criteria."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Market Intelligence"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "service-customer-research-surveys": {
+    "title": "Customer Research & Surveys",
+    "path": "/services/customer-research-surveys",
+    "template": "service",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Customer Research & Surveys"
+      },
+      {
+        "key": "menuBlurb",
+        "label": "menuBlurb",
+        "type": "text",
+        "default": "Voice of Customer, segmentation, pricing and churn research."
+      },
+      {
+        "key": "h1",
+        "label": "h1",
+        "type": "text",
+        "default": "Connect customer evidence to product, pricing, service, and retention decisions."
+      },
+      {
+        "key": "intro",
+        "label": "intro",
+        "type": "text",
+        "default": "DMRK Insights designs customer, dealer, employee, and stakeholder research programs using surveys and qualitative methods."
+      },
+      {
+        "key": "sectionTitle",
+        "label": "sectionTitle",
+        "type": "text",
+        "default": "Listen at the moments that matter"
+      },
+      {
+        "key": "sectionIntro",
+        "label": "sectionIntro",
+        "type": "text",
+        "default": "Effective Voice of Customer research identifies who should be heard, when feedback is most useful, and which decisions the evidence must serve."
+      },
+      {
+        "key": "capabilities_0_title",
+        "label": "capabilities 0 title",
+        "type": "text",
+        "default": "Voice of Customer"
+      },
+      {
+        "key": "capabilities_0_body",
+        "label": "capabilities 0 body",
+        "type": "text",
+        "default": "Study journey friction, service expectations, satisfaction drivers, unmet needs, and the actions most likely to improve outcomes."
+      },
+      {
+        "key": "capabilities_1_title",
+        "label": "capabilities 1 title",
+        "type": "text",
+        "default": "Segmentation and demand"
+      },
+      {
+        "key": "capabilities_1_body",
+        "label": "capabilities 1 body",
+        "type": "text",
+        "default": "Compare needs, behaviors, value, purchase criteria, adoption barriers, and channel preferences across customer groups."
+      },
+      {
+        "key": "capabilities_2_title",
+        "label": "capabilities 2 title",
+        "type": "text",
+        "default": "Pricing and offer research"
+      },
+      {
+        "key": "capabilities_2_body",
+        "label": "capabilities 2 body",
+        "type": "text",
+        "default": "Test value perception, willingness to pay, feature tradeoffs, package comprehension, and competitive alternatives."
+      },
+      {
+        "key": "capabilities_3_title",
+        "label": "capabilities 3 title",
+        "type": "text",
+        "default": "Relationship and churn research"
+      },
+      {
+        "key": "capabilities_3_body",
+        "label": "capabilities 3 body",
+        "type": "text",
+        "default": "Identify onboarding, product, support, outcome, and communication factors that influence renewal confidence."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Customer Research & Surveys"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "service-expert-interviews": {
+    "title": "Expert Interviews",
+    "path": "/services/expert-interviews",
+    "template": "service",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Expert Interviews"
+      },
+      {
+        "key": "menuBlurb",
+        "label": "menuBlurb",
+        "type": "text",
+        "default": "Identification, screening, moderation and synthesis."
+      },
+      {
+        "key": "h1",
+        "label": "h1",
+        "type": "text",
+        "default": "Reach relevant industry experience and turn conversations into evidence."
+      },
+      {
+        "key": "intro",
+        "label": "intro",
+        "type": "text",
+        "default": "DMRK Insights supports expert identification, screening, interview design, moderation, and synthesis for market education and diligence."
+      },
+      {
+        "key": "sectionTitle",
+        "label": "sectionTitle",
+        "type": "text",
+        "default": "Specialist context for difficult questions"
+      },
+      {
+        "key": "sectionIntro",
+        "label": "sectionIntro",
+        "type": "text",
+        "default": "Expert interviews are most useful when the participant profile, evidence gap, and boundaries of the conversation are defined up front."
+      },
+      {
+        "key": "capabilities_0_title",
+        "label": "capabilities 0 title",
+        "type": "text",
+        "default": "Market and value-chain education"
+      },
+      {
+        "key": "capabilities_0_body",
+        "label": "capabilities 0 body",
+        "type": "text",
+        "default": "Understand industry structure, economics, buyer behavior, channels, regulation, and operating practices."
+      },
+      {
+        "key": "capabilities_1_title",
+        "label": "capabilities 1 title",
+        "type": "text",
+        "default": "Strategy pressure testing"
+      },
+      {
+        "key": "capabilities_1_body",
+        "label": "capabilities 1 body",
+        "type": "text",
+        "default": "Challenge market assumptions, entry routes, adoption barriers, implementation plans, and commercial scenarios."
+      },
+      {
+        "key": "capabilities_2_title",
+        "label": "capabilities 2 title",
+        "type": "text",
+        "default": "Competitor and supplier context"
+      },
+      {
+        "key": "capabilities_2_body",
+        "label": "capabilities 2 body",
+        "type": "text",
+        "default": "Explore capability differences, service models, purchasing criteria, cost drivers, and ecosystem relationships."
+      },
+      {
+        "key": "capabilities_3_title",
+        "label": "capabilities 3 title",
+        "type": "text",
+        "default": "Investment research support"
+      },
+      {
+        "key": "capabilities_3_body",
+        "label": "capabilities 3 body",
+        "type": "text",
+        "default": "Test market narratives, demand drivers, risk factors, customer workflows, and growth assumptions with relevant practitioners."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Expert Interviews"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "service-market-entry-strategy": {
+    "title": "Market Entry Strategy",
+    "path": "/services/market-entry-strategy",
+    "template": "service",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Market Entry Strategy"
+      },
+      {
+        "key": "menuBlurb",
+        "label": "menuBlurb",
+        "type": "text",
+        "default": "Where to play and how to win, before capital is committed."
+      },
+      {
+        "key": "h1",
+        "label": "h1",
+        "type": "text",
+        "default": "Validate where to play and how to win before committing capital."
+      },
+      {
+        "key": "intro",
+        "label": "intro",
+        "type": "text",
+        "default": "DMRK Insights combines market sizing, customer evidence, competitor economics, channel research, and investment scenarios."
+      },
+      {
+        "key": "sectionTitle",
+        "label": "sectionTitle",
+        "type": "text",
+        "default": "A decision case, not just a market overview"
+      },
+      {
+        "key": "sectionIntro",
+        "label": "sectionIntro",
+        "type": "text",
+        "default": "Market attractiveness matters only when the opportunity is accessible, commercially viable, and aligned with the organization's capability."
+      },
+      {
+        "key": "capabilities_0_title",
+        "label": "capabilities 0 title",
+        "type": "text",
+        "default": "Market attractiveness"
+      },
+      {
+        "key": "capabilities_0_body",
+        "label": "capabilities 0 body",
+        "type": "text",
+        "default": "Estimate demand, growth, segment concentration, unmet needs, regulation, and structural risks using transparent assumptions."
+      },
+      {
+        "key": "capabilities_1_title",
+        "label": "capabilities 1 title",
+        "type": "text",
+        "default": "Buyer and demand validation"
+      },
+      {
+        "key": "capabilities_1_body",
+        "label": "capabilities 1 body",
+        "type": "text",
+        "default": "Test use cases, purchase criteria, willingness to switch, buying authority, price expectations, and adoption barriers."
+      },
+      {
+        "key": "capabilities_2_title",
+        "label": "capabilities 2 title",
+        "type": "text",
+        "default": "Competitive economics"
+      },
+      {
+        "key": "capabilities_2_body",
+        "label": "capabilities 2 body",
+        "type": "text",
+        "default": "Compare offers, positioning, pricing, channels, partnerships, operating models, and likely competitive responses."
+      },
+      {
+        "key": "capabilities_3_title",
+        "label": "capabilities 3 title",
+        "type": "text",
+        "default": "Route to market"
+      },
+      {
+        "key": "capabilities_3_body",
+        "label": "capabilities 3 body",
+        "type": "text",
+        "default": "Evaluate direct, partner, distributor, acquisition, and pilot-led entry routes against cost, control, speed, and access."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Market Entry Strategy"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-0": {
+    "title": "Automotive & Mobility",
+    "path": "/industries/automotive-mobility",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Automotive & Mobility"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Electric vehicles, connected fleets, used cars, logistics technology, and supply-chain automation."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Automotive & Mobility"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-1": {
+    "title": "BFSI",
+    "path": "/industries/bfsi",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "BFSI"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Digital banking, embedded finance, insurance technology, payments, and wealth platforms."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "BFSI"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-2": {
+    "title": "Consumer & Retail",
+    "path": "/industries/consumer-retail",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Consumer & Retail"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "E-commerce, modern trade, loyalty, packaging, consumer behavior, and pricing strategy."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Consumer & Retail"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-3": {
+    "title": "Energy & Utilities",
+    "path": "/industries/energy-utilities",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Energy & Utilities"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Renewables, grid modernization, storage, clean fuels, electrification, and utility operations."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Energy & Utilities"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-4": {
+    "title": "Healthcare",
+    "path": "/industries/healthcare",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Healthcare"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Diagnostics, digital health, hospital automation, pharma distribution, and patient experience."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Healthcare"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-5": {
+    "title": "Technology & Telecom",
+    "path": "/industries/technology-telecom",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Technology & Telecom"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Cloud, AI, cybersecurity, 5G monetization, enterprise software, and device ecosystems."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Technology & Telecom"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-6": {
+    "title": "Manufacturing",
+    "path": "/industries/manufacturing",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Manufacturing"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Industry 4.0, industrial automation, sourcing shifts, materials, and operational excellence."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Manufacturing"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-7": {
+    "title": "Real Estate & Construction",
+    "path": "/industries/real-estate-construction",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Real Estate & Construction"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Urban development, proptech, building materials, project delivery, and commercial assets."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Real Estate & Construction"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-8": {
+    "title": "Education & Skilling",
+    "path": "/industries/education-skilling",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Education & Skilling"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Edtech platforms, employability programs, corporate learning, and training ecosystems."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Education & Skilling"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-9": {
+    "title": "Food & Beverage",
+    "path": "/industries/food-beverage",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "name",
+        "type": "text",
+        "default": "Food & Beverage"
+      },
+      {
+        "key": "blurb",
+        "label": "blurb",
+        "type": "text",
+        "default": "Functional nutrition, food service, beverage innovation, cold chain, and sustainable packaging."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Food & Beverage"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "settings": {
+    "title": "Shared website settings",
+    "path": null,
+    "template": "global",
+    "fields": [
+      {
+        "key": "regions",
+        "label": "regions",
+        "type": "text",
+        "default": "India, Middle East, Europe, Americas, and APAC"
+      },
+      {
+        "key": "method_0_step",
+        "label": "method 0 step",
+        "type": "text",
+        "default": "Define"
+      },
+      {
+        "key": "method_0_body",
+        "label": "method 0 body",
+        "type": "text",
+        "default": "Clarify the decision, assumptions, stakeholders, geography, customer groups, and practical constraints."
+      },
+      {
+        "key": "method_1_step",
+        "label": "method 1 step",
+        "type": "text",
+        "default": "Collect"
+      },
+      {
+        "key": "method_1_body",
+        "label": "method 1 body",
+        "type": "text",
+        "default": "Combine appropriate primary and secondary evidence, including surveys, interviews, market sources, and competitor observation."
+      },
+      {
+        "key": "method_2_step",
+        "label": "method 2 step",
+        "type": "text",
+        "default": "Validate"
+      },
+      {
+        "key": "method_2_body",
+        "label": "method 2 body",
+        "type": "text",
+        "default": "Check source quality, respondent relevance, conflicting signals, limitations, and the sensitivity of important assumptions."
+      },
+      {
+        "key": "method_3_step",
+        "label": "method 3 step",
+        "type": "text",
+        "default": "Apply"
+      },
+      {
+        "key": "method_3_body",
+        "label": "method 3 body",
+        "type": "text",
+        "default": "Translate findings into priorities, risks, scenarios, and next actions that match the original business decision."
+      },
+      {
+        "key": "brand",
+        "label": "brand",
+        "type": "text",
+        "default": "DMRK"
+      },
+      {
+        "key": "brandSubtitle",
+        "label": "brandSubtitle",
+        "type": "text",
+        "default": "Insights"
+      },
+      {
+        "key": "topbar",
+        "label": "topbar",
+        "type": "text",
+        "default": "Market intelligence, customer research and strategy support in India and beyond."
+      },
+      {
+        "key": "requestLabel",
+        "label": "requestLabel",
+        "type": "text",
+        "default": "Request research"
+      },
+      {
+        "key": "analystLabel",
+        "label": "analystLabel",
+        "type": "text",
+        "default": "Talk to an analyst"
+      },
+      {
+        "key": "footerDescription",
+        "label": "footerDescription",
+        "type": "text",
+        "default": "Market intelligence, customer research, competitor analysis, surveys and strategic consulting for confident growth decisions."
+      },
+      {
+        "key": "copyright",
+        "label": "copyright",
+        "type": "text",
+        "default": "DMRK Insights. All rights reserved."
+      },
+      {
+        "key": "companyLabel",
+        "label": "companyLabel",
+        "type": "text",
+        "default": "Company"
+      },
+      {
+        "key": "resourcesLabel",
+        "label": "resourcesLabel",
+        "type": "text",
+        "default": "Resources"
+      },
+      {
+        "key": "legalLabel",
+        "label": "legalLabel",
+        "type": "text",
+        "default": "Legal"
+      },
+      {
+        "key": "logo",
+        "label": "Brand logo (optional)",
+        "type": "image",
+        "default": ""
+      },
+      {
+        "key": "featuredCaseId",
+        "label": "Homepage featured case study",
+        "type": "content",
+        "default": "case-logistics-market-entry"
+      },
+      {
+        "key": "articlesCount",
+        "label": "articles to show",
+        "type": "number",
+        "default": 3
+      },
+      {
+        "key": "reportsCount",
+        "label": "reports to show",
+        "type": "number",
+        "default": 4
+      },
+      {
+        "key": "industriesCount",
+        "label": "industries to show",
+        "type": "number",
+        "default": 12
+      },
+      {
+        "key": "servicesCount",
+        "label": "services to show",
+        "type": "number",
+        "default": 12
+      },
+      {
+        "key": "relatedCount",
+        "label": "related to show",
+        "type": "number",
+        "default": 3
+      },
+      {
+        "key": "email",
+        "label": "Public contact email",
+        "type": "text",
+        "default": "hello@dmrkinsights.com"
+      },
+      {
+        "key": "phone",
+        "label": "Public contact phone",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "address",
+        "label": "Public office address",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "custom": {
+    "title": "New information page",
+    "path": null,
+    "template": "page",
+    "fields": [
+      {
+        "key": "eyebrow",
+        "label": "Small heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "heading",
+        "label": "Main heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "intro",
+        "label": "Introduction",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "image",
+        "label": "Page image",
+        "type": "image",
+        "default": ""
+      },
+      {
+        "key": "body",
+        "label": "Page content (separate paragraphs with a blank line)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "New information page"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "privacy-policy": {
+    "title": "Privacy policy",
+    "path": "/privacy-policy",
+    "template": "page",
+    "fields": [
+      {
+        "key": "eyebrow",
+        "label": "Small heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "heading",
+        "label": "Main heading",
+        "type": "text",
+        "default": "Privacy policy"
+      },
+      {
+        "key": "intro",
+        "label": "Introduction",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "image",
+        "label": "Page image",
+        "type": "image",
+        "default": ""
+      },
+      {
+        "key": "body",
+        "label": "Page content (separate paragraphs with a blank line)",
+        "type": "text",
+        "default": "Legal\n\nPrivacy Policy\n\nThis policy explains how DMRK Insights collects, uses, stores, and shares information through the website, forms, newsletter flows, and demo admin tools.\n\nLast updated: May 3, 2026\n\n1. Scope of This Policy\n\nThis Privacy Policy applies to information collected through the DMRK Insights website and related online forms. It covers visitors, prospective clients, newsletter subscribers, partners, and other users who interact with our public pages. Separate client agreements may govern information shared during paid research, survey, consulting, or expert access engagements.\n\n2. Information You Provide\n\nWe may collect information you choose to submit, including your name, business email, phone number, company, job title, country, industry, project needs, message content, newsletter preferences, and any details included in a consultation request. If you use a demo admin feature in the static site, content saved in that feature may be stored locally in your browser.\n\n3. Information Collected Automatically\n\nWhen you visit the website, we may collect basic technical and usage information such as pages viewed, referring page, browser type, device type, operating system, approximate location, time spent, and interaction patterns. This information helps us understand which resources are useful, diagnose website issues, and improve navigation and content quality.\n\n4. Cookies and Similar Technologies\n\nWe may use cookies, local storage, pixels, or similar technologies for basic functionality, analytics, saved preferences, performance measurement, and security. For example, the static admin prototype uses browser storage to keep demo content edits on the same device. You can adjust cookie settings in your browser, although disabling cookies or local storage may affect certain features.\n\n5. How We Use Information\n\nWe use collected information to respond to inquiries, scope research requests, prepare proposals, send newsletters or requested resources, manage contact records, improve site content, protect against misuse, analyze audience interests, and maintain business records. We may also use inquiry details to understand which industries, regions, and service lines are most relevant to prospective clients.\n\n6. Research and Project Context\n\nIf you submit business questions, market context, competitor names, customer segments, or project requirements, we use that information to evaluate how DMRK Insights may help. Please avoid submitting confidential client data, sensitive personal data, regulated data, or trade secrets through public forms unless you are authorized and the information is necessary for the inquiry.\n\n7. Newsletter and Marketing Communications\n\nIf you sign up for newsletters or request resources, we may use your contact details to send relevant updates, articles, reports, invitations, or service information. You can ask us to stop marketing communications at any time. We may still send non-marketing messages related to an inquiry, proposal, service request, or legal obligation.\n\n8. Sharing With Service Providers\n\nWe do not sell personal information. We may share limited information with service providers who support hosting, analytics, email delivery, contact forms, customer relationship management, document preparation, security, or professional services. These providers are expected to use information only for the services they provide to us.\n\n9. Legal, Safety, and Business Reasons\n\nWe may disclose information if required by law, regulation, legal process, government request, security investigation, rights protection, fraud prevention, or business transfer. If DMRK Insights is involved in a merger, acquisition, restructuring, or asset transfer, relevant information may be transferred as part of that transaction subject to appropriate safeguards.\n\n10. Data Retention\n\nWe keep information for as long as needed to respond to requests, manage relationships, provide services, maintain records, comply with legal obligations, resolve disputes, and improve our website. Retention periods may vary depending on the type of information, the nature of the inquiry, and whether a formal client relationship is established.\n\n11. Security\n\nWe use reasonable administrative, technical, and organizational safeguards designed to protect information against unauthorized access, loss, misuse, or alteration. No website, email system, or online transmission is completely secure. You should use care when deciding what information to submit through online forms.\n\n12. International Processing\n\nVisitors may access this website from different countries, and service providers may process information in multiple locations. By using the website, you understand that information may be processed outside your state, province, or country, where privacy laws may differ.\n\n13. Your Choices and Requests\n\nYou may request access, correction, deletion, or restriction of your personal information where applicable. You may also ask to unsubscribe from marketing communications or update your contact preferences. We may need to verify your request and may retain certain information where required for legal, security, or legitimate business purposes.\n\n14. Children's Privacy\n\nThe website is intended for business and professional audiences. We do not knowingly collect personal information from children. If you believe a child has provided personal information, please contact us so we can review and delete it where appropriate.\n\n15. Updates to This Policy\n\nWe may update this Privacy Policy as our website, services, tools, or legal requirements change. The updated version will be posted on this page with a revised date. Continued use of the website after an update means the revised policy applies going forward.\n\n16. Contact\n\nFor privacy questions or requests, contact hello@dmrkinsights.com."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Privacy policy"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "terms-of-use": {
+    "title": "Terms of use",
+    "path": "/terms-of-use",
+    "template": "page",
+    "fields": [
+      {
+        "key": "eyebrow",
+        "label": "Small heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "heading",
+        "label": "Main heading",
+        "type": "text",
+        "default": "Terms of use"
+      },
+      {
+        "key": "intro",
+        "label": "Introduction",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "image",
+        "label": "Page image",
+        "type": "image",
+        "default": ""
+      },
+      {
+        "key": "body",
+        "label": "Page content (separate paragraphs with a blank line)",
+        "type": "text",
+        "default": "Legal\n\nTerms of Use\n\nThese terms govern use of the DMRK Insights website, public research samples, articles, forms, and other online materials.\n\nLast updated: May 3, 2026\n\n1. Acceptance of These Terms\n\nBy using this website, you agree to these Terms of Use. If you access the website on behalf of a company, fund, institution, or other organization, you represent that you have authority to use the site on that organization's behalf. If you do not agree with these terms, you should not use the website or submit information through it.\n\n2. Purpose of the Website\n\nThe DMRK Insights website is designed to explain our research, survey, market intelligence, and consulting capabilities. It includes sample reports, case studies, articles, newsletters, industry pages, contact forms, and demonstration content. Public content is intended to help visitors understand our methods and areas of expertise; it is not a substitute for a commissioned engagement or current project-specific research.\n\n3. Informational Content Only\n\nAll public content is provided for general informational and educational purposes. It should not be treated as legal, financial, investment, tax, medical, procurement, operational, or professional advice. Market conditions, regulations, customer behavior, and competitive landscapes can change quickly. Any business decision should be supported by current data, suitable professional judgment, and research tailored to the relevant market and use case.\n\n4. Sample and Demonstration Materials\n\nSome pages may contain sample reports, fictionalized case studies, representative findings, placeholder company information, or demo admin functionality. These materials are created to show how DMRK Insights content could be structured. They should not be interpreted as verified client results, guaranteed outcomes, live market forecasts, or complete research deliverables unless specifically stated in a signed agreement.\n\n5. Intellectual Property Rights\n\nDMRK Insights owns or licenses the website design, text, page layouts, research frameworks, graphics, sample report formats, logos, and other materials on the site. You may view the site and share links to public pages for ordinary business reference. You may not copy, reproduce, republish, sell, scrape, train models on, modify, distribute, or create derivative works from substantial portions of the site without prior written permission.\n\n6. Permitted Use\n\nYou may use the website to learn about DMRK Insights, read public resources, request consultation, submit a project inquiry, or subscribe to available updates. Your use must be lawful, reasonable, and consistent with normal website browsing. You are responsible for ensuring that your use of our content complies with applicable laws, your internal policies, and any confidentiality obligations you may owe to third parties.\n\n7. Prohibited Use\n\nYou must not attempt to interfere with the website, bypass access controls, introduce malicious code, overload systems, harvest data, impersonate another person, misrepresent your affiliation, remove proprietary notices, or use the site to infringe rights or violate laws. You must not use DMRK Insights materials in a way that suggests endorsement, partnership, investment recommendation, or verified market conclusion where none exists.\n\n8. Forms, Inquiries, and User Submissions\n\nWhen you submit information through a form, you confirm that the information is accurate and that you are authorized to share it. You grant DMRK Insights permission to use the submission to respond to you, evaluate the inquiry, prepare a proposal, improve services, and maintain business records. Please do not submit sensitive personal information, confidential client data, trade secrets, regulated data, or information belonging to another party unless sharing it is necessary and you have authority to do so.\n\n9. Client Engagements\n\nAny paid consulting, research, survey, expert access, or market intelligence engagement will be governed by a separate proposal, statement of work, master services agreement, confidentiality agreement, or other written contract. If there is a conflict between these website terms and a signed client agreement, the signed agreement will control for that specific engagement.\n\n10. Third-Party Links and Services\n\nThe website may link to third-party websites, tools, images, publications, platforms, or resources. These links are provided for convenience or context. DMRK Insights does not control and is not responsible for third-party content, policies, accuracy, security, availability, or practices. Visiting a third-party site is at your own risk.\n\n11. No Warranty\n\nThe website is provided on an as-is and as-available basis. We try to keep content useful, accurate, and accessible, but we do not guarantee that the site will be uninterrupted, error-free, complete, current, secure, or suitable for your intended purpose. We may update, remove, or change site content at any time.\n\n12. Limitation of Liability\n\nTo the extent permitted by law, DMRK Insights will not be liable for indirect, incidental, consequential, special, punitive, exemplary, lost-profit, lost-revenue, lost-data, or business-interruption damages arising from use of the website or reliance on public content. Your primary remedy for dissatisfaction with the website is to stop using it.\n\n13. Indemnity\n\nYou agree to defend and hold DMRK Insights harmless from claims, losses, liabilities, damages, costs, and expenses arising from your misuse of the site, violation of these terms, infringement of third-party rights, or unauthorized submission of information.\n\n14. Changes to Terms\n\nWe may revise these terms as our website, services, compliance needs, or business practices evolve. Updated terms will be posted on this page with a revised date. Continued use of the website after changes are posted means you accept the updated terms.\n\n15. Contact\n\nQuestions about these terms can be sent to hello@dmrkinsights.com."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Terms of use"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "path": "/newsletter",
+    "template": "page",
+    "fields": [
+      {
+        "key": "eyebrow",
+        "label": "Small heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "heading",
+        "label": "Main heading",
+        "type": "text",
+        "default": "Newsletter"
+      },
+      {
+        "key": "intro",
+        "label": "Introduction",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "image",
+        "label": "Page image",
+        "type": "image",
+        "default": ""
+      },
+      {
+        "key": "body",
+        "label": "Page content (separate paragraphs with a blank line)",
+        "type": "text",
+        "default": "Newsletter\n\nGet practical market intelligence in your inbox.\n\nSubscribe for concise notes on industry shifts, customer research, competitor moves, and strategy frameworks.\n\nMonthly briefing\n\nWhat you will receive Market signalsSector movements, demand shifts, and emerging opportunities. Research methodsPractical guidance on surveys, VoC, pricing, and competitor analysis. Decision toolsFrameworks your team can use in planning, investment, and strategy conversations.\n\nRecent issues\n\nSample newsletter briefings\n\nRead example editions of the DMRK Insights monthly intelligence briefing. May 2026\n\nMarket Signals: AI, Healthcare, and Consumer Demand\n\nA monthly briefing on enterprise AI budgets, digital health adoption, and shifting consumer price expectations.Read issue April 2026\n\nCustomer Research: Turning Feedback Into Growth\n\nPractical notes on VoC design, customer segmentation, pricing evidence, and retention diagnostics.Read issue March 2026\n\nStrategy Brief: Expansion and Supplier Intelligence\n\nFrameworks for market validation, supplier benchmarking, and competitor scan refreshes.Read issue"
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Newsletter"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "industry-professional-services": {
+    "title": "Professional Services",
+    "path": "/industries/professional-services",
+    "template": "industry",
+    "fields": [
+      {
+        "key": "name",
+        "label": "Industry name",
+        "type": "text",
+        "default": "Professional Services"
+      },
+      {
+        "key": "blurb",
+        "label": "Description",
+        "type": "text",
+        "default": "Coverage available on request."
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Professional Services"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "newsletter-strategy-brief-march-2026": {
+    "title": "Strategy Brief: Expansion and Supplier Intelligence",
+    "path": "/newsletter/strategy-brief-march-2026",
+    "template": "page",
+    "fields": [
+      {
+        "key": "eyebrow",
+        "label": "Small heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "heading",
+        "label": "Main heading",
+        "type": "text",
+        "default": "Strategy Brief: Expansion and Supplier Intelligence"
+      },
+      {
+        "key": "intro",
+        "label": "Introduction",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "image",
+        "label": "Page image",
+        "type": "image",
+        "default": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80"
+      },
+      {
+        "key": "body",
+        "label": "Page content (separate paragraphs with a blank line)",
+        "type": "text",
+        "default": "Newsletter Issue\n\nStrategy Brief: Expansion and Supplier Intelligence\n\nMarch 2026 briefing on market validation, procurement leverage, and competitor scan refreshes.March 2026Strategy briefMonthly briefing\n\nIssue Summary\n\nExpansion note Market validation should test accessibility as carefully as attractiveness.\n\nProcurement note Supplier research creates leverage when it identifies credible alternatives and cost drivers.\n\nCompetition note Competitor scans should refresh positioning, pricing, and channel evidence regularly.\n\nMarket validation before capital\n\nTeams should define the investment decision first, then test demand quality, route-to-market feasibility, and competitor economics.\n\nSupplier intelligence as leverage\n\nProcurement teams gain negotiating power when they can prove alternate sources, service tradeoffs, and category cost drivers.\n\nCompetitor scans need refresh cycles\n\nCompetitive assumptions age quickly when pricing, partnerships, and product bundles change. Refreshing the scan keeps strategy grounded.\n\nSubscribe to the briefing\n\nReceive monthly frameworks for strategy, research, and commercial decisions.Subscribe"
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Strategy Brief: Expansion and Supplier Intelligence"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "newsletter-market-signals-may-2026": {
+    "title": "Market Signals: AI, Healthcare, and Consumer Demand",
+    "path": "/newsletter/market-signals-may-2026",
+    "template": "page",
+    "fields": [
+      {
+        "key": "eyebrow",
+        "label": "Small heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "heading",
+        "label": "Main heading",
+        "type": "text",
+        "default": "Market Signals: AI, Healthcare, and Consumer Demand"
+      },
+      {
+        "key": "intro",
+        "label": "Introduction",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "image",
+        "label": "Page image",
+        "type": "image",
+        "default": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80"
+      },
+      {
+        "key": "body",
+        "label": "Page content (separate paragraphs with a blank line)",
+        "type": "text",
+        "default": "Newsletter Issue\n\nMarket Signals: AI, Healthcare, and Consumer Demand\n\nMay 2026 briefing on enterprise AI budgets, digital health adoption, and changing consumer price expectations.May 2026Monthly briefing3 signals\n\nIssue Summary\n\nLead signal Enterprise AI budgets are shifting from pilots to governed workflow deployments.\n\nHealthcare watch Digital health platforms with provider workflow integration are showing stronger repeat use.\n\nConsumer note Pricing pressure is making value communication as important as discounting.\n\nSignal 1: Enterprise AI budgets mature\n\nLeadership teams are asking for clearer ownership of AI ROI, stronger data governance, and use cases tied to measurable cycle-time reduction.\n\nSignal 2: Digital health moves into workflows\n\nAdoption is strongest where platforms reduce provider work, improve follow-up, or become part of recurring care routines.\n\nSignal 3: Consumers want value clarity\n\nBrands should explain price tiers, pack benefits, and service value more clearly as customers compare alternatives more actively.\n\nSubscribe to the briefing\n\nGet monthly market signals and decision frameworks from DMRK Insights.Subscribe"
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Market Signals: AI, Healthcare, and Consumer Demand"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  },
+  "newsletter-customer-research-april-2026": {
+    "title": "Customer Research: Turning Feedback Into Growth",
+    "path": "/newsletter/customer-research-april-2026",
+    "template": "page",
+    "fields": [
+      {
+        "key": "eyebrow",
+        "label": "Small heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "heading",
+        "label": "Main heading",
+        "type": "text",
+        "default": "Customer Research: Turning Feedback Into Growth"
+      },
+      {
+        "key": "intro",
+        "label": "Introduction",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "image",
+        "label": "Page image",
+        "type": "image",
+        "default": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80"
+      },
+      {
+        "key": "body",
+        "label": "Page content (separate paragraphs with a blank line)",
+        "type": "text",
+        "default": "Newsletter Issue\n\nCustomer Research: Turning Feedback Into Growth\n\nApril 2026 briefing on VoC design, segmentation, pricing evidence, and retention diagnostics.April 2026Customer researchMonthly briefing\n\nIssue Summary\n\nLead idea Customer feedback has more impact when it is tied to commercial decisions and owner actions.\n\nMethod note Segment survey data by value, journey stage, and usage behavior before making recommendations.\n\nDecision tool Use a retention driver map to rank issues by churn risk and fixability.\n\nVoC should start with decisions\n\nSurvey design improves when teams define the product, service, pricing, or retention decisions the research must support.\n\nSegmentation changes the story\n\nHigh-value customers, new users, inactive users, and channel partners can interpret the same experience very differently.\n\nRetention diagnostics need ownership\n\nInsights should be translated into owner-specific action plans so customer success, product, and operations teams know what to change.\n\nSubscribe to the briefing\n\nGet monthly customer research methods and strategy notes.Subscribe"
+      },
+      {
+        "key": "seo_title",
+        "label": "Search engine title",
+        "type": "text",
+        "default": "Customer Research: Turning Feedback Into Growth"
+      },
+      {
+        "key": "seo_description",
+        "label": "Search engine description",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  }
+}
