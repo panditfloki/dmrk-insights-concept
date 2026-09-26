@@ -57,3 +57,7 @@ controls. Keep the 8px rhythm unless the redesign is explicitly signed off.
 2. `#0f67c7` is the client's instruction, not a preference. Any deviation is a question, never a
    change.
 3. When in doubt about a value, open `_RECON/styles.css` — the running site is the referee.
+
+## Website guidelines and client handout
+
+Use `DESIGN.md` for implementation rules and `docs/BRAND-GUIDELINES.md` for the broader guide. The client-ready PDF is `output/pdf/DMRK-Insights-Brand-Guidelines.pdf`. The primary blue above stays locked; typography and wider application rules are presented for client review.

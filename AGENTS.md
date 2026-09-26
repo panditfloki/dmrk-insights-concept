@@ -1,6 +1,6 @@
 # DMRK frontend copy
 
-Read `PRODUCT.md` before editing this frontend. Its copy rule prohibits em dashes (Unicode U+2014), including encoded equivalents, in all public copy and metadata.
+Read `PRODUCT.md`, `DESIGN.md` and `docs/BRAND-GUIDELINES.md` before editing this frontend. Its copy rule prohibits em dashes (Unicode U+2014), including encoded equivalents, in all public copy and metadata.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

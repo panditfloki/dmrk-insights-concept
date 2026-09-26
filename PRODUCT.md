@@ -1,4 +1,4 @@
-# DMRK Insights concept
+# DMRK Insights website
 
 ## Register
 
@@ -6,7 +6,7 @@ brand
 
 ## Users and purpose
 
-Research and consulting readers evaluating DMRK's expertise and editorial content. This site presents a design concept, not the live DMRK service.
+Research and consulting readers evaluating DMRK's expertise and editorial content. The CMS-backed website is live at dmrkinsights.com. Local review builds remain separate from production.
 
 ## Copy rule
 
@@ -16,8 +16,8 @@ Never use em dashes (Unicode U+2014), including encoded equivalents, in public w
 
 - Credible editorial presentation using the client's own content, without invented claims.
 - Preserve DMRK's identity and the locked blue in `BRAND.md`, not dydxfx's styling.
-- Keep indexing protections and the license intact. The owner explicitly requested removal of the visible concept banner on 2026-09-16; it remains a concept build.
+- Preserve environment-specific indexing: local/concept builds stay noindex; the public site follows DMRK_PUBLIC_SITE. Preserve the license and the client identity.
 - Preserve native scrolling, accessible navigation and reduced-motion support.
 - Port the existing scroll-progress behaviour without redesigning the site.
 
-The announcements feature is out of scope.
+Client review requirements: readable, brand-consistent button states; market prices hidden until Show is selected; searchable Insights industries with format buttons and no category filter. See DESIGN.md and docs/BRAND-GUIDELINES.md for the shared system.

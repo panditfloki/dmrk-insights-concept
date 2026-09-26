@@ -23,7 +23,7 @@ export default function Nav() {
   const brand=<><Logo /><span>{copy('brand')}<small>{copy('brandSubtitle')}</small></span></>;
   return <>
     <div className="topbar"><div className="wrap"><span className="topbar-note">{copy('topbar')}</span><Link href="/contact">{copy('requestLabel')} <Arrow /></Link></div></div>
-    <header className="site-header"><nav className="navbar has-mega" data-navbar aria-label="Primary" onMouseLeave={mega.closeSoon} onMouseEnter={mega.cancelClose}><div className="wrap">
+    <header className="site-header"><nav className="navbar has-mega" data-navbar aria-label="Primary" onKeyDown={event=>{if(event.key==='Escape'&&open){setOpen(false);event.currentTarget.querySelector<HTMLButtonElement>('.nav-toggle')?.focus();}}} onMouseLeave={mega.closeSoon} onMouseEnter={mega.cancelClose}><div className="wrap">
       <Link href="/" className="brand">{copy('logo')?<Image src={copy('logo')} alt={copy('brand')} width={160} height={48} style={{objectFit:'contain'}}/>:brand}</Link>
       <ul className="nav-links">{roots.map(root=>{
         const id=String(root.id),children=menu.filter(m=>m.parentId===root.id);

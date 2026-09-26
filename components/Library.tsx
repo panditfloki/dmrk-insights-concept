@@ -1,7 +1,7 @@
 "use client";
 import ThemeSelect from "./ThemeSelect";
 import { useWebsite } from '@/components/WebsiteProvider';
-import { pageCopy, siteServices, siteIndustries } from '@/lib/website-shared';
+import { pageCopy, siteIndustries } from '@/lib/website-shared';
 
 import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
@@ -13,29 +13,25 @@ const TYPES: ItemType[] = ["article", "report", "case"];
 export default function Library({ items: allItems }: { items: ContentItem[] }) {
   const site = useWebsite();
   const copy = pageCopy(site.pages.find(p=>p.key==='library-labels'));
-  const industries = useMemo(() => [...new Set(allItems.map((i) => i.industry))].sort(), [allItems]);
+  const industries = useMemo(() => [...new Set([...siteIndustries(site).map(i => i.name), ...allItems.map(i => i.industry)])].sort(), [allItems, site]);
   const params = useSearchParams();
-  const [category, setCategory] = useState<string>("all");
   const [type, setType] = useState<ItemType | "all">("all");
   const [industry, setIndustry] = useState<string>("all");
 
   // Deep links from the nav and the homepage industry tiles.
   useEffect(() => {
     const t = params.get("type");
-    if (t && (TYPES as string[]).includes(t)) setType(t as ItemType);
+    setType(t && (TYPES as string[]).includes(t) ? t as ItemType : "all");
     const i = params.get("industry");
-    if (i && industries.includes(i)) setIndustry(i);
+    setIndustry(i && industries.includes(i) ? i : "all");
   }, [params, industries]);
 
-  const categories = site.categories;
-  const selected = categories.find(c=>c.slug===category);
-  const categorySlugs = [category,...categories.filter(c=>c.parentId===selected?.id).map(c=>c.slug)];
   const results = useMemo(
     () =>
       allItems.filter(
-        (i) => (category === "all" || categorySlugs.includes(i.categorySlug||"")) && (type === "all" || i.type === type) && (industry === "all" || i.industry === industry)
+        (i) => (type === "all" || i.type === type) && (industry === "all" || i.industry === industry)
       ),
-    [type, industry, allItems, category, categorySlugs.join(",")]
+    [type, industry, allItems]
   );
 
   const countFor = (t: ItemType) =>
@@ -55,26 +51,19 @@ export default function Library({ items: allItems }: { items: ContentItem[] }) {
             ))}
           </div>
 
-          <span className="filters-sep" aria-hidden="true" />
-
-          <div className="filters-group">
-            <button className="chip" aria-pressed={industry === "all"} onClick={() => setIndustry("all")}>{copy("text_2", "All sectors") }</button>
-            {industries.map((ind) => (
-              <button key={ind} className="chip" aria-pressed={industry === ind} onClick={() => setIndustry(ind)}>
-                {ind}
-              </button>
-            ))}
-          </div>
         </div>
 
-        <div className="filters category-filter"><ThemeSelect label="Category" value={category} onChange={setCategory} options={[{value:'all',label:'All categories'},...categories.map(c=>({value:c.slug,label:`${c.parentId?'↳ ':''}${c.name}`}))]} /></div>
+        <div className="filters industry-filter">
+          <ThemeSelect searchable searchPlaceholder="Search industries" emptyMessage="No industries found. Try another search."
+            label="Industry" value={industry} onChange={setIndustry}
+            options={[{value: 'all', label: copy("text_2", "All sectors")}, ...industries.map(ind => ({value: ind, label: ind}))]} />
+        </div>
         <p className="result-line" aria-live="polite">
           <span>{copy("text_3", "Showing") }{" "}<strong>{results.length}</strong>{" "}{copy("text_4", "of") }{" "}<strong>{allItems.length}</strong>{" "}{copy("text_5", "published pieces") }</span>
-          {(type !== "all" || industry !== "all" || category !== "all") && (
+          {(type !== "all" || industry !== "all") && (
             <button
               className="chip"
               onClick={() => {
-                setCategory("all");
                 setType("all");
                 setIndustry("all");
               }}

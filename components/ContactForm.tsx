@@ -1,7 +1,7 @@
 "use client";
 import ThemeSelect from "./ThemeSelect";
 import { useWebsite } from '@/components/WebsiteProvider';
-import { pageCopy, siteServices, siteIndustries } from '@/lib/website-shared';
+import { pageCopy, siteServices } from '@/lib/website-shared';
 
 import { useState } from "react";
 import { Arrow } from "./Icons";
@@ -9,7 +9,6 @@ import { Arrow } from "./Icons";
 export default function ContactForm() {
   const site = useWebsite();
   const copy = pageCopy(site.pages.find(p=>p.key==='contact-form'));
-  const industries = siteIndustries(site).map(s=>s.name);
   const services = siteServices(site);
   const [sent, setSent] = useState(false);
   const [busy,setBusy]=useState(false);
@@ -43,13 +42,10 @@ export default function ContactForm() {
         </label>
       </div>
 
-      <div className="field-row">
-        <label className="field">
-          <span>{copy("text_7", "Company") }</span>
-          <input name="company" autoComplete="organization" placeholder={copy("text_8", "Company name")} />
-        </label>
-        <ThemeSelect name="sector" label={copy("text_9", "Sector")} placeholder={copy("text_10", "Select a sector")} options={industries.map(i=>({value:i,label:i}))} />
-      </div>
+      <label className="field">
+        <span>{copy("text_7", "Company") }</span>
+        <input name="company" autoComplete="organization" placeholder={copy("text_8", "Company name")} />
+      </label>
 
       <ThemeSelect name="service" label={copy("text_11", "What do you need?")} placeholder={copy("text_12", "Select a service")} options={[...services.map(s=>({value:s.slug,label:s.name})),{value:'other',label:copy("text_13", "Something else")}]} />
 

@@ -8,3 +8,6 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# Local PDF render/font intermediates. Final guide is in output/pdf/.
+tmp/
