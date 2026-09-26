@@ -25,7 +25,7 @@ export default async function Home() {
   const PILLARS = [0,1,2,3].map(i=>({t:copy(`pillars_${i}_t`),d:copy(`pillars_${i}_d`)}));
   const METHOD = [0,1,2,3].map(i=>({n:copy(`method_${i}_n`),t:copy(`method_${i}_t`),d:copy(`method_${i}_d`)}));
   const allItems = await getPublishedContent();
-  const industries = siteIndustries(site).map(s=>s.name).slice(0,pageCount(site,'industriesCount',12));
+  const industries = ['BFSI', 'Consumer & Retail', 'Healthcare', 'Technology & Telecom'];
   const featuredCase = allItems.find((i) => i.id === settingsCopy(site)('featuredCaseId'));
   const latest = allItems.filter((i) => i.type === "article").slice(0,pageCount(site,'articlesCount',3));
   const reports = allItems.filter((i) => i.type === "report").slice(0,pageCount(site,'reportsCount',4));
@@ -131,8 +131,9 @@ export default async function Home() {
               <Reveal as="h2">{copy("text_19", "Coverage across every major sector") }</Reveal>
               <Reveal as="p">{copy("text_20", "Each sector has its own panel, its own sample frame and its own benchmarks.") }</Reveal>
             </div>
+            <Reveal><Link className="button button--ghost" href="/insights">View more <Arrow /></Link></Reveal>
           </div>
-          <div className="grid grid--3">
+          <div className="grid coverage-grid">
             {industries.map((ind) => {
               const n = allItems.filter((i) => i.industry === ind).length;
               return (
